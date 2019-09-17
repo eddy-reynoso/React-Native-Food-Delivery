@@ -2,8 +2,9 @@ import React, {Fragment, Component} from 'react';
 import {SafeAreaView, StyleSheet, StatusBar} from 'react-native';
 import Router from './Router';
 import {f, auth, database} from '../config/config.js';
+import {TabRouter} from './TabRouter';
 
-export default class App extends Component {
+export default class Root extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -13,7 +14,7 @@ export default class App extends Component {
     return (
       <Fragment>
         <StatusBar barStyle="dark-content" />
-        <Router />
+        <TabRouter />
       </Fragment>
     );
   }
